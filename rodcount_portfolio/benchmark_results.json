@@ -1,0 +1,209 @@
+{
+  "dataset": "synthetic seed=42; not production measurements",
+  "rows": 300000,
+  "python": "3.11.4",
+  "platform": "Windows",
+  "device": "CPU",
+  "versions": {
+    "numpy": "2.2.6",
+    "torch": "2.7.1",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.23.2",
+    "psutil": "6.0.0"
+  },
+  "output_equal": true,
+  "medians": {
+    "baseline_onnx_dual": {
+      "startup_ms": 1889.4820000000436,
+      "preprocessing_ms": 4.463699999973869,
+      "inference_pipeline_ms": 0.4793999999606058,
+      "mapping_ms": 210.80419999998412,
+      "calculation_ms": 215.7472999999186,
+      "peak_rss_mb": 242.3203125,
+      "total_ms": 2472.319099999993
+    },
+    "optimized_onnx": {
+      "startup_ms": 165.7222000000047,
+      "preprocessing_ms": 0.7130000000188375,
+      "inference_pipeline_ms": 0.37739999999075735,
+      "mapping_ms": 0.20320000004403482,
+      "calculation_ms": 1.2885000000437685,
+      "peak_rss_mb": 57.92578125,
+      "total_ms": 313.3100000000013
+    },
+    "baseline_torch_w4": {
+      "startup_ms": 1806.1969999999974,
+      "preprocessing_ms": 5.5198999999674925,
+      "inference_pipeline_ms": 2971.877999999947,
+      "mapping_ms": 218.33939999999075,
+      "calculation_ms": 3193.6408999999344,
+      "peak_rss_mb": 896.4609375,
+      "total_ms": 5333.85080000005
+    },
+    "optimized_torch": {
+      "startup_ms": 1805.0135000000296,
+      "preprocessing_ms": 0.7158000000231368,
+      "inference_pipeline_ms": 1.424100000008366,
+      "mapping_ms": 0.19349999996620681,
+      "calculation_ms": 2.3856000000250788,
+      "peak_rss_mb": 186.3984375,
+      "total_ms": 2154.0569000000005
+    }
+  },
+  "reductions_percent": {
+    "optimized_onnx": {
+      "calculation_ms": 99.40277352252184,
+      "peak_rss_mb": 76.09536705677532
+    },
+    "optimized_torch": {
+      "calculation_ms": 99.92530155785438,
+      "peak_rss_mb": 79.2072995372428
+    }
+  },
+  "samples": [
+    {
+      "startup_ms": 2728.603899999996,
+      "preprocessing_ms": 5.601899999987836,
+      "inference_pipeline_ms": 1.6918999999688822,
+      "mapping_ms": 221.99330000000828,
+      "calculation_ms": 229.287099999965,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "baseline_onnx_dual",
+      "peak_rss_mb": 242.3203125,
+      "total_ms": 3350.755300000003,
+      "run": 1
+    },
+    {
+      "startup_ms": 157.42319999998244,
+      "preprocessing_ms": 0.7130000000188375,
+      "inference_pipeline_ms": 0.37739999999075735,
+      "mapping_ms": 0.19810000003417372,
+      "calculation_ms": 1.2885000000437685,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "optimized_onnx",
+      "peak_rss_mb": 69.21875,
+      "total_ms": 294.658199999958,
+      "run": 1
+    },
+    {
+      "startup_ms": 1792.3825000000306,
+      "preprocessing_ms": 4.45830000001024,
+      "inference_pipeline_ms": 2946.963799999992,
+      "mapping_ms": 218.33939999999075,
+      "calculation_ms": 3169.761499999993,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "baseline_torch_w4",
+      "peak_rss_mb": 895.3828125,
+      "total_ms": 5283.419199999969,
+      "run": 1
+    },
+    {
+      "startup_ms": 1795.5577999999832,
+      "preprocessing_ms": 0.7158000000231368,
+      "inference_pipeline_ms": 15.043999999988955,
+      "mapping_ms": 0.22610000002032393,
+      "calculation_ms": 15.985900000032416,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "optimized_torch",
+      "peak_rss_mb": 186.56640625,
+      "total_ms": 2154.0569000000005,
+      "run": 1
+    },
+    {
+      "startup_ms": 1805.0135000000296,
+      "preprocessing_ms": 0.6531000000222775,
+      "inference_pipeline_ms": 1.3910000000123546,
+      "mapping_ms": 0.19349999996620681,
+      "calculation_ms": 2.237600000000839,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "optimized_torch",
+      "peak_rss_mb": 183.125,
+      "total_ms": 2123.933300000033,
+      "run": 2
+    },
+    {
+      "startup_ms": 1806.1969999999974,
+      "preprocessing_ms": 6.046299999979965,
+      "inference_pipeline_ms": 2971.877999999947,
+      "mapping_ms": 215.71660000000747,
+      "calculation_ms": 3193.6408999999344,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "baseline_torch_w4",
+      "peak_rss_mb": 897.05078125,
+      "total_ms": 5333.85080000005,
+      "run": 2
+    },
+    {
+      "startup_ms": 167.38269999996191,
+      "preprocessing_ms": 0.7492999999954009,
+      "inference_pipeline_ms": 0.377899999989495,
+      "mapping_ms": 0.23559999999633874,
+      "calculation_ms": 1.3627999999812346,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "optimized_onnx",
+      "peak_rss_mb": 57.92578125,
+      "total_ms": 316.38110000000097,
+      "run": 2
+    },
+    {
+      "startup_ms": 1878.140999999971,
+      "preprocessing_ms": 4.149299999994582,
+      "inference_pipeline_ms": 0.31540000003360547,
+      "mapping_ms": 197.00060000002395,
+      "calculation_ms": 201.46530000005214,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "baseline_onnx_dual",
+      "peak_rss_mb": 243.30078125,
+      "total_ms": 2417.7272000000016,
+      "run": 2
+    },
+    {
+      "startup_ms": 1889.4820000000436,
+      "preprocessing_ms": 4.463699999973869,
+      "inference_pipeline_ms": 0.4793999999606058,
+      "mapping_ms": 210.80419999998412,
+      "calculation_ms": 215.7472999999186,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "baseline_onnx_dual",
+      "peak_rss_mb": 241.51171875,
+      "total_ms": 2472.319099999993,
+      "run": 3
+    },
+    {
+      "startup_ms": 165.7222000000047,
+      "preprocessing_ms": 0.6192000000169173,
+      "inference_pipeline_ms": 0.34859999999525826,
+      "mapping_ms": 0.20320000004403482,
+      "calculation_ms": 1.1710000000562104,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "optimized_onnx",
+      "peak_rss_mb": 55.3515625,
+      "total_ms": 313.3100000000013,
+      "run": 3
+    },
+    {
+      "startup_ms": 1863.2795000000328,
+      "preprocessing_ms": 5.5198999999674925,
+      "inference_pipeline_ms": 3104.854399999965,
+      "mapping_ms": 220.76319999996485,
+      "calculation_ms": 3331.1374999998975,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "baseline_torch_w4",
+      "peak_rss_mb": 896.4609375,
+      "total_ms": 5547.432599999979,
+      "run": 3
+    },
+    {
+      "startup_ms": 1901.5673999999763,
+      "preprocessing_ms": 0.7726000000047861,
+      "inference_pipeline_ms": 1.424100000008366,
+      "mapping_ms": 0.18890000001192675,
+      "calculation_ms": 2.3856000000250788,
+      "result_sha256": "4ec375b9acfa496ae113fe7b6503722faa4b3b4e86ec5bea5cf81b35fc97fe7c",
+      "case": "optimized_torch",
+      "peak_rss_mb": 186.3984375,
+      "total_ms": 2260.480099999995,
+      "run": 3
+    }
+  ]
+}
